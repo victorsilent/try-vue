@@ -1,6 +1,5 @@
 <template>
-  <Card background-header="#3498db" color-header="#fff" >
-    Adicionar Usuário
+  <Card title="Adicionar Usuário">
   </Card>
 </template>
 
@@ -19,7 +18,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   
 </style>

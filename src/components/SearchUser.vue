@@ -1,6 +1,6 @@
 <template>
-  <Card background-header="#3498db" color-header="#fff" >
-    Buscar Usuários
+  <Card title="Buscar Usuários">
+    
   </Card>
 </template>
 

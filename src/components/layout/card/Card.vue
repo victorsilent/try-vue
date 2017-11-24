@@ -1,15 +1,15 @@
 <template>
   <div class="card">
     <div class="card-header">
-      <p class="card-header-title" :style="{color: colorHeader, background: backgroundHeader}">
-        <slot>
-          Campo da seção
-        </slot>
+      <p class="card-header-title">
+        {{title}}
       </p>
     </div>
     <div class="card-content">
       <div class="content">
-
+        <slot>
+          Card Content
+        </slot>
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  props: ['background-header', 'color-header'],
+  props: ['title'],
   name: 'Card',
   data() {
     return {
@@ -27,6 +27,5 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 </style>
