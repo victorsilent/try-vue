@@ -8,7 +8,7 @@ module.exports = {
   custom_assertions_path: ['test/e2e/custom-assertions'],
 
   selenium: {
-    start_process: true,
+    start_process: false,
     server_path: require('selenium-server').path,
     host: '127.0.0.1',
     port: 4444,
@@ -22,9 +22,13 @@ module.exports = {
       selenium_port: 4444,
       selenium_host: 'localhost',
       silent: true,
-      globals: {
-        devServerURL: 'http://localhost:' + (process.env.PORT || config.dev.port)
-      }
+      desiredCapabilities : {
+      browserName : 'phantomjs',
+      javascriptEnabled : true,
+      acceptSslCerts : true,
+      phantomjs.binary.path : 'phantomjs',
+      phantomjs.cli.args : ['--ignore-ssl-errors=true']
+    }
     },
 
     chrome: {
