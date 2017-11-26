@@ -9,7 +9,7 @@ before_install:
 before_script:
   - npm install
 
-script: phantomjs test/e2e/runner.js
+script: npm run test
 
 cache:
   directories:
