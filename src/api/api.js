@@ -7,29 +7,19 @@ const axiosInstance = axios.create({
 });
 
 export function addContact(contact) {
-  axiosInstance.post('contacts', contact)
-    .then(request => request)
-    .catch(error => (
-      `Sorry! We can't add this user. Error code ${error.code}`
-    ));
+  return axiosInstance.post('contacts', contact)
+    .then(response => Promise.resolve(response.data))
+    .catch(error => Promise.reject(error));
 }
 
-export function getUser(id) {
-  axiosInstance.get(`contacts/${id}`)
-    .then(request => (
-      request.data
-    ))
-    .catch(error => (
-      `Sorry! We can't get this user. Error code  ${error.code}`
-    ));
+export function getContact(id) {
+  return axiosInstance.get(`contacts/${id}`)
+    .then(response => Promise.resolve(response.data))
+    .catch(error => Promise.reject(error));
 }
 
 export function listUsers() {
-  axiosInstance.get()
-    .then(request => (
-      request.data
-    ))
-    .catch(error => (
-      `Sorry! We can't user list. Error code' ${error.code}`
-    ));
+  return axiosInstance.get('contacts')
+    .then(response => Promise.resolve(response.data))
+    .catch(error => Promise.reject(error));
 }

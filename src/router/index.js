@@ -10,14 +10,14 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {
+      path: '/',
+      name: 'ListUsers',
+      component: ListUsers,
+    },
+    {
       path: '/add',
       name: 'AddUser',
       component: AddUser,
-    },
-    {
-      path: '/list',
-      name: 'ListUsers',
-      component: ListUsers,
     },
     {
       path: '/search',

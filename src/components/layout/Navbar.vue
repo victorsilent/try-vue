@@ -3,7 +3,7 @@
   <div class="container">
     <div class="navbar-brand">
       <div class="navbar-item">
-        <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+        <img src="https://dev.meuprospere.com.br/static/images/prospere.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
       </div>
       <button class="button navbar-burger">
         <span></span>
@@ -21,7 +21,7 @@
             <router-link class="navbar-item" to="/add">
               Adicionar Contato
             </router-link>
-            <router-link class="navbar-item" to="/list">
+            <router-link class="navbar-item" to="/">
               Listar Contatos
             </router-link>
             <router-link class="navbar-item" to="/search">
@@ -45,7 +45,8 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.navbar{
+  background: #bdc3c7;
+}
 </style>

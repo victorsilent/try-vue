@@ -1,0 +1,19 @@
+dist: trusty
+language: node_js
+addons:
+  chrome: stable
+before_install:
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+before_script:
+  - npm install
+script:
+  - npm run test
+cache:
+  directories:
+    - "node_modules"
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
