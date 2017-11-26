@@ -7,16 +7,6 @@ module.exports = {
   output_folder: 'test/e2e/reports',
   custom_assertions_path: ['test/e2e/custom-assertions'],
 
-  selenium: {
-    start_process: false,
-    server_path: require('selenium-server').path,
-    host: '127.0.0.1',
-    port: 4444,
-    cli_args: {
-      'webdriver.chrome.driver': require('chromedriver').path
-    }
-  },
-
   test_settings: {
     phantomjs: {
       "desiredCapabilities": {
