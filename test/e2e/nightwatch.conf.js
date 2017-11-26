@@ -26,8 +26,8 @@ module.exports = {
         browserName : 'phantomjs',
         javascriptEnabled : true,
         acceptSslCerts : true,
-        phantomjs.binary.path : 'phantomjs',
-        phantomjs.cli.args : ['--ignore-ssl-errors=true']
+        'phantomjs.binary.path' : 'phantomjs',
+        'phantomjs.cli.args' : ['--ignore-ssl-errors=true']
       }
     },
 
