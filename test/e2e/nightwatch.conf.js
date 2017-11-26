@@ -8,9 +8,9 @@ module.exports = {
   custom_assertions_path: ['test/e2e/custom-assertions'],
 
   test_settings: {
-    phantomjs: {
+    default: {
       "desiredCapabilities": {
-        "browserName" : "phantomjs",
+        "browserName": "phantomjs",
         "javascriptEnabled" : true,
         "acceptSslCerts" : true,
         "phantomjs.binary.path" : "phantomjs",
