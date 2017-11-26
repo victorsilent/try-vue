@@ -23,6 +23,7 @@ cache:
   directories:
     - "node_modules"
 deploy:
+  repo: docs
   local_dir: docs
   provider: pages
   skip_cleanup: true
