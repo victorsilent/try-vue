@@ -19,16 +19,14 @@ module.exports = {
 
   test_settings: {
     default: {
-      selenium_port: 4444,
+      selenium_port: 9515,
       selenium_host: 'localhost',
       silent: true,
-      desiredCapabilities : {
-        browserName : 'phantomjs',
-        javascriptEnabled : true,
-        acceptSslCerts : true,
-        'phantomjs.binary.path' : 'phantomjs',
-        'phantomjs.cli.args' : ['--ignore-ssl-errors=true']
-      }
+      "browserName": "chrome",
+        "chromeOptions" : {
+          "args" : ["--no-sandbox"]
+        },
+      "acceptSslCerts": true,
     },
 
     chrome: {

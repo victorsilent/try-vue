@@ -48,6 +48,7 @@ module.exports = {
     browser
       .url('http://127.0.0.1:8080/#/')
       .waitForElementVisible('#app', 5000)
+      .pause(2000)
       .click(".single-user:first-child")
       .expect.element('#selected-user').to.be.present;
   },
