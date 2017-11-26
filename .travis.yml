@@ -10,6 +10,7 @@ before_install:
   - sleep 3
   - stty cols 80
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+  - xvfb :23 & chromedriver --port=9515 --url-base=/wd/hub & while ! curl localhost:9515; do echo -n .; sleep 1; done
 before_script:
   - npm install
   - npm install phantomjs-prebuilt --save
