@@ -1,5 +1,4 @@
 require('babel-register')
-var phantomjs = require('phantomjs-prebuilt')
 var config = require('../../config')
 
 // http://nightwatchjs.org/gettingstarted#settings-file
@@ -27,8 +26,8 @@ module.exports = {
         browserName : 'phantomjs',
         javascriptEnabled : true,
         acceptSslCerts : true,
-        'phantomjs.binary.path' : 'phantomjs',
-        'phantomjs.cli.args' : ['--ignore-ssl-errors=true']
+        phantomjs.binary.path : 'phantomjs',
+        phantomjs.cli.args : ['--ignore-ssl-errors=true']
       }
     },
 
