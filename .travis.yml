@@ -13,16 +13,17 @@ before_install:
   - xvfb :23 & chromedriver --port=9515 --url-base=/wd/hub & while ! curl localhost:9515; do echo -n .; sleep 1; done
 before_script:
   - npm install
-  - npm install phantomjs-prebuilt --save
 
 script: npm run test
 
-after_success: npm run build
+after_success: 
+  - npm run build
+  - mv /dist /docs 
 cache:
   directories:
     - "node_modules"
 deploy:
-  local_dir: dist
+  local_dir: docs
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
