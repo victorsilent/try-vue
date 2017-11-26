@@ -18,7 +18,8 @@ script: npm run test
 
 after_success: 
   - npm run build
-  - mv dist docs 
+  - mv dist docs
+  - mv manifest.json docs
 cache:
   directories:
     - "node_modules"
